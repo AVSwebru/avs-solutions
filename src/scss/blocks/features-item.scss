@@ -1,0 +1,24 @@
+.features-item {
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.features-item__icon {
+  margin-bottom: 20px;
+  fill: #6d2cc1;
+}
+
+.features-item__title {
+  margin: 0 0 15px;
+  color: #1c1c1c;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.features-item__desc {
+  color: #555353;
+  font-size: 14px;
+  font-weight: 500;
+}

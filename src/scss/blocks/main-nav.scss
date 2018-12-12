@@ -1,0 +1,23 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav__list {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+  margin: 0 -11px;
+}
+
+.main-nav__item {
+  margin: 0 11px;
+}
+
+.main-nav__link {
+  color: #1e1e1e;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+}

@@ -1,0 +1,16 @@
+.features {
+  padding: 120px 0 215px;
+  background: #f2eef9 url('../../img/bg-features.jpg') 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.features__section-title {
+  margin-bottom: 90px;
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+  // grid-auto-rows: 240px;
+  grid-gap: 30px;
+}
