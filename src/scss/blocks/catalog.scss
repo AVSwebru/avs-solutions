@@ -21,6 +21,7 @@
 }
 
 .catalog__grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, 260px);
   grid-gap: 30px;

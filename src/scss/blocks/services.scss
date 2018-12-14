@@ -1,0 +1,16 @@
+.services {
+  padding: 95px 0 170px;
+  background: #fff url('../../img/bg-services.jpg') 0% 0% no-repeat;
+  background-size: auto;
+}
+
+.services__section-title {
+  margin-bottom: 70px;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 360px);
+  grid-auto-rows: 280px;
+  grid-gap: 30px;
+}

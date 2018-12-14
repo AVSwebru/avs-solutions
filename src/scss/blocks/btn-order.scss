@@ -13,6 +13,7 @@
   background-position-y: 50%;
   background-repeat: no-repeat;
   transition: background-position-x 0.5s, box-shadow 0.25s;
+  cursor: pointer;
   &:hover {
     background-position-x: 0%;
     box-shadow: 3px 4px 12px rgba(81, 48, 131, 0.35);

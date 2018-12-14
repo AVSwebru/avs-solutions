@@ -1,0 +1,11 @@
+.btn-service {
+  @include reset-btn;
+  min-width: 136px;
+  box-sizing: border-box;
+  padding: 17px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #672aa0;
+  cursor: pointer;
+}

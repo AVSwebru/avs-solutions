@@ -1,0 +1,33 @@
+.main-footer {
+  padding: 45px 0;
+}
+
+.main-footer__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-footer__link {
+  display: block;
+  margin-bottom: 10px;
+  color: #1e1e1e;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  &:hover {
+    color: #1e1e1e;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.main-footer__rightside {
+  display: flex;
+  align-items: center;
+}
+
+.main-footer__main-nav {
+  margin-right: 45px;
+}

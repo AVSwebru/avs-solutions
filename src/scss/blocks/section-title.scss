@@ -4,4 +4,10 @@
   font-weight: 700;
   line-height: 1;
   text-align: center;
+  &--dark {
+    color: #000;
+  }
+  &--light {
+    color: #fff;
+  }
 }

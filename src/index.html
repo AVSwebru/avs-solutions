@@ -10,7 +10,7 @@
 </head>
 
 <body class="page">
-  <header class="main-header">
+  <header class="main-header" data-uk-sticky>
     <div class="main-header__wrapper">
       <div class="main-header__logo-wrapper">
         <img class="main-header__logo-pic" src="img/logo.svg" width="50" height="50" alt="Логотоп">
@@ -42,14 +42,51 @@
       <div class="intro__body">
         <div class="intro__inner">
           <h1 class="intro__title">Готовый сайт за 5 дней</h1>
-          <button class="btn-request" type="bytton">Оставить заявку</button>
+          <button class="intro__request-btn" type="bytton">Оставить заявку</button>
         </div>
+        <div class="intro__rect-1"></div>
+        <div class="intro__rect-2"></div>
+        <div class="intro__rect-3"></div>
+        <div class="intro__circle-1"></div>
+        <div class="intro__circle-2"></div>
+        <svg class="intro__stick-1">
+          <use xlink:href="/img/sprite.svg#thin-stick"/>
+        </svg>
+        <svg class="intro__stick-2">
+          <use xlink:href="/img/sprite.svg#bold-stick"/>
+        </svg>
+        <svg class="intro__stick-3">
+          <use xlink:href="/img/sprite.svg#thin-stick"/>
+        </svg>
+        <svg class="intro__stick-4">
+          <use xlink:href="/img/sprite.svg#bold-stick"/>
+        </svg>
+        <div class="intro__half-triangle-1"></div>
+        <div class="intro__half-triangle-2"></div>
+        <svg class="intro__rings-1">
+          <use xlink:href="/img/sprite.svg#rings"/>
+        </svg>
+        <svg class="intro__rings-2">
+          <use xlink:href="/img/sprite.svg#rings"/>
+        </svg>
+        <svg class="intro__rings-3">
+          <use xlink:href="/img/sprite.svg#rings"/>
+        </svg>
+        <svg class="intro__pyramid-1">
+          <use xlink:href="/img/sprite.svg#pyramid"/>
+        </svg>
+        <svg class="intro__pyramid-2">
+          <use xlink:href="/img/sprite.svg#pyramid"/>
+        </svg>
+        <svg class="intro__triangle">
+          <use xlink:href="/img/sprite.svg#triangle"/>
+        </svg>
       </div>
     </div>
   </div>
   <section class="features">
     <div class="uk-container">
-      <h2 class="features__section-title section-title">
+      <h2 class="features__section-title section-title section-title--dark">
         Преимущества готовых сайтов
       </h2>
       <div class="features__grid">
@@ -136,7 +173,7 @@
   </section>
   <section class="result">
     <div class="uk-container">
-      <h2 class="result__section-title section-title">
+      <h2 class="result__section-title section-title section-title--dark">
         Преимущества готовых сайтов
       </h2>
       <div class="result__grid">
@@ -171,14 +208,14 @@
   </section>
   <section class="catalog">
     <div class="uk-container">
-      <h2 class="catalog__section-title section-title">
+      <h2 class="catalog__section-title section-title section-title--dark">
         Каталог готовых сайтов
       </h2>
       <div class="catalog__section-desc section-desc">
         Как вы представляете себе создание веб сайта? Это недели работы, тысячи строк кода, сотни часов настройки и отладки, десятки неизвестных терминов, программ, муторный и монотонный труд.
       </div>
       <div class="catalog__wrapper">
-        <div class="uk-position-relative">
+        <div>
           <div class="catalog__grid">
             <div>
               <article class="template-item">
@@ -234,15 +271,377 @@
                 </button>
               </article>
             </div>
+            <button class="catalog__show-more" type="button">Посмотреть еще</button>
           </div>
-          <button class="catalog__show-more" type="button">Посмотреть еще</button>
         </div>
         <div>
-          Фильтр
+          <form class="catalog-filter">
+            <fieldset class="catalog-filter__section">
+               <legend class="catalog-filter__section-title">
+                 Тип сайта
+               </legend>
+               <div class="catalog-filter__row">
+                 <input class="catalog-filter__input" id="catalog-type-any" name="catalog-type" type="checkbox" checked>
+                 <label class="catalog-filter__label" for="catalog-type-any">Любой</label>
+               </div>
+               <div class="catalog-filter__row">
+                 <input class="catalog-filter__input" id="catalog-type-corporate" name="catalog-type" type="checkbox">
+                 <label class="catalog-filter__label" for="catalog-type-corporate">Корпоративный сайт</label>
+               </div>
+               <div class="catalog-filter__row">
+                 <input class="catalog-filter__input" id="catalog-type-landing" name="catalog-type" type="checkbox">
+                 <label class="catalog-filter__label" for="catalog-type-landing">Landing Page</label>
+               </div>
+               <div class="catalog-filter__row">
+                 <input class="catalog-filter__input" id="catalog-type-shop" name="catalog-type" type="checkbox">
+                 <label class="catalog-filter__label" for="catalog-type-shop">Интернет-магазин</label>
+               </div>
+               <div class="catalog-filter__row">
+                 <input class="catalog-filter__input" id="catalog-type-small business" name="catalog-type" type="checkbox">
+                 <label class="catalog-filter__label" for="catalog-type-small business">Малый бизнес</label>
+               </div>
+            </fieldset>
+            <fieldset class="catalog-filter__section">
+              <legend class="catalog-filter__section-title">
+                Тематика сайта
+              </legend>
+              <div class="catalog-filter__row">
+                <input class="catalog-filter__input" id="catalog-theme-child" name="catalog-theme" type="checkbox" checked>
+                <label class="catalog-filter__label" for="catalog-theme-child">Детский магазин</label>
+              </div>
+              <div class="catalog-filter__row">
+                <input class="catalog-filter__input" id="catalog-theme-flowers" name="catalog-theme" type="checkbox">
+                <label class="catalog-filter__label" for="catalog-theme-flowers">Магазин цветов</label>
+              </div>
+              <div class="catalog-filter__row">
+                <input class="catalog-filter__input" id="catalog-theme-building" name="catalog-theme" type="checkbox">
+                <label class="catalog-filter__label" for="catalog-theme-building">Строительная компания</label>
+              </div>
+              <div class="catalog-filter__row">
+                <input class="catalog-filter__input" id="catalog-theme-furniture" name="catalog-theme" type="checkbox">
+                <label class="catalog-filter__label" for="catalog-theme-furniture">Мебель на заказ</label>
+             </div>
+            </fieldset>
+            <input class="catalog-filter__accept-btn" type="button" value="Подобрать">
+          </form>
+
         </div>
       </div>
     </div>
   </section>
+  <section class="examples">
+    <div class="uk-container">
+      <h2 class="examples__section-title section-title section-title--light">
+        Примеры работ
+      </h2>
+      <div class="examples__wrapper uk-position-relative" data-uk-slideshow="animation: fade">
+        <div>
+          <ul class="examples__thumbnav uk-thumbnav">
+          <li class="examples__thumbnav-item" data-uk-slideshow-item="0">
+            <a class="examples__thumbnav-link" href="#">
+              <img class="examples__thumbnav-image" src="img/examples-thumbnav-1.jpg" alt="">
+            </a>
+          </li>
+          <li class="examples__thumbnav-item" data-uk-slideshow-item="1">
+            <a class="examples__thumbnav-link" href="#">
+              <img class="examples__thumbnav-image" src="img/examples-thumbnav-2.jpg" alt="">
+            </a>
+          </li>
+          <li class="examples__thumbnav-item" data-uk-slideshow-item="2">
+            <a class="examples__thumbnav-link" href="#">
+              <img class="examples__thumbnav-image" src="img/examples-thumbnav-3.jpg" alt="">
+            </a>
+          </li>
+          <li class="examples__thumbnav-item" data-uk-slideshow-item="3">
+            <a class="examples__thumbnav-link" href="#">
+              <img class="examples__thumbnav-image" src="img/examples-thumbnav-1.jpg" alt="">
+            </a>
+          </li>
+          <li class="examples__thumbnav-item" data-uk-slideshow-item="4">
+            <a class="examples__thumbnav-link" href="#">
+              <img class="examples__thumbnav-image" src="img/examples-thumbnav-2.jpg" alt="">
+            </a>
+          </li>
+          <li class="examples__thumbnav-item" data-uk-slideshow-item="5">
+            <a class="examples__thumbnav-link" href="#">
+              <img class="examples__thumbnav-image" src="img/examples-thumbnav-3.jpg" alt="">
+            </a>
+          </li>
+          <li class="examples__thumbnav-item" data-uk-slideshow-item="6">
+            <a class="examples__thumbnav-link" href="#">
+              <img class="examples__thumbnav-image" src="img/examples-thumbnav-1.jpg" alt="">
+            </a>
+          </li>
+          <li class="examples__thumbnav-item" data-uk-slideshow-item="7">
+            <a class="examples__thumbnav-link" href="#">
+              <img class="examples__thumbnav-image" src="img/examples-thumbnav-2.jpg" alt="">
+            </a>
+          </li>
+          <li class="examples__thumbnav-item" data-uk-slideshow-item="8">
+            <a class="examples__thumbnav-link" href="#">
+              <img class="examples__thumbnav-image" src="img/examples-thumbnav-3.jpg" alt="">
+            </a>
+          </li>
+          <li class="examples__thumbnav-item" data-uk-slideshow-item="9">
+            <a class="examples__thumbnav-link" href="#">
+              <img class="examples__thumbnav-image" src="img/examples-thumbnav-1.jpg" alt="">
+            </a>
+          </li>
+        </ul>
+        </div>
+        <div>
+          <div class="examples__nav">
+            <a class="examples__nav-link examples__nav-link--left" href="#" data-uk-slideshow-item="previous">← Предыдущая работа</a>
+            <a class="examples__nav-link examples__nav-link--right" href="#" data-uk-slideshow-item="next">Следующая работа →</a>
+          </div>
+          <ul class="examples__items uk-slideshow-items">
+          <li>
+            <div class="examples__content">
+              <div>
+                <div class="examples__large-item">
+                  <a class="examples__large-item-wrapper uk-cover-container" href="#">
+                    <img class="examples__image" data-uk-cover src="img/example-1.jpg" alt="">
+                    <div class="examples__type">
+                      Шаблон
+                    </div>
+                  </a>
+                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                </div>
+              </div>
+              <div>
+                <div class="examples__small-item">
+                  <a class="examples__small-item-wrapper uk-cover-container" href="#">
+                    <img class="examples__image" data-uk-cover src="img/example-2.jpg" alt="">
+                    <div class="examples__type">
+                      Результат
+                    </div>
+                  </a>
+                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                </div>
+              </div>
+              <div>
+                <div class="examples__small-item">
+                  <a class="examples__small-item-wrapper uk-cover-container" href="#">
+                    <img class="examples__image" data-uk-cover src="img/example-3.jpg" alt="">
+                    <div class="examples__type">
+                      Результат
+                    </div>
+                  </a>
+                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="examples__content">
+              <div>
+                <div class="examples__large-item">
+                  <a class="examples__large-item-wrapper uk-cover-container" href="#">
+                    <img data-uk-cover src="img/example-3.jpg" alt="">
+                    <div class="examples__type">
+                      Шаблон
+                    </div>
+                  </a>
+                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                </div>
+              </div>
+              <div>
+                <div class="examples__small-item">
+                  <a class="examples__small-item-wrapper uk-cover-container" href="#">
+                    <img data-uk-cover src="img/example-1.jpg" alt="">
+                    <div class="examples__type">
+                      Результат
+                    </div>
+                  </a>
+                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                </div>
+              </div>
+              <div>
+                <div class="examples__small-item">
+                  <a class="examples__small-item-wrapper uk-cover-container" href="#">
+                    <img data-uk-cover src="img/example-2.jpg" alt="">
+                    <div class="examples__type">
+                      Результат
+                    </div>
+                  </a>
+                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="examples__content">
+              <div>
+                <div class="examples__large-item">
+                  <a class="examples__large-item-wrapper uk-cover-container" href="#">
+                    <img data-uk-cover src="img/example-3.jpg" alt="">
+                    <div class="examples__type">
+                      Шаблон
+                    </div>
+                  </a>
+                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                </div>
+              </div>
+              <div>
+                <div class="examples__small-item">
+                  <a class="examples__small-item-wrapper uk-cover-container" href="#">
+                    <img data-uk-cover src="img/example-2.jpg" alt="">
+                    <div class="examples__type">
+                      Результат
+                    </div>
+                  </a>
+                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                </div>
+              </div>
+              <div>
+                <div class="examples__small-item">
+                  <a class="examples__small-item-wrapper uk-cover-container" href="#">
+                    <img data-uk-cover src="img/example-1.jpg" alt="">
+                    <div class="examples__type">
+                      Результат
+                    </div>
+                  </a>
+                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services">
+    <div class="uk-container">
+      <h2 class="services__section-title section-title section-title--dark">Услуги</h2>
+      <div class="services__grid">
+        <div>
+          <article class="service-item">
+            <div>
+              <h3 class="service-item__title">SEO - продвижение сайта</h3>
+              <div class="service-item__desc">
+                Наша команда сделала все для того, чтобы создать уникальные шаблоны, у каждого нашего клиента получается персонализированный сайт.
+              </div>
+            </div>
+            <footer class="service-item__footer">
+              <div class="service-item__price">
+                от 3000 <span class="rubl">c</span>
+              </div>
+              <button type="button" class="btn-service">Заказать</button>
+            </footer>
+          </article>
+        </div>
+        <div>
+          <article class="service-item">
+            <h3 class="service-item__title">SEO - продвижение сайта</h3>
+            <div class="service-item__desc">
+              Наша команда сделала все для того, чтобы создать уникальные шаблоны, у каждого нашего клиента получается персонализированный сайт.
+            </div>
+            <footer class="service-item__footer">
+              <div class="service-item__price">
+                от 3000 <span class="rubl">c</span>
+              </div>
+              <button type="button" class="btn-service">Заказать</button>
+            </footer>
+          </article>
+        </div>
+        <div>
+          <article class="service-item">
+            <h3 class="service-item__title">SEO - продвижение сайта</h3>
+            <div class="service-item__desc">
+              Наша команда сделала все для того, чтобы создать уникальные шаблоны, у каждого нашего клиента получается персонализированный сайт.
+            </div>
+            <footer class="service-item__footer">
+              <div class="service-item__price">
+                от 3000 <span class="rubl">c</span>
+              </div>
+              <button type="button" class="btn-service">Заказать</button>
+            </footer>
+          </article>
+        </div>
+        <div>
+          <article class="service-item">
+            <div>
+              <h3 class="service-item__title">SEO - продвижение сайта</h3>
+              <div class="service-item__desc">
+                Наша команда сделала все для того, чтобы создать уникальные шаблоны, у каждого нашего клиента получается персонализированный сайт.
+              </div>
+            </div>
+            <footer class="service-item__footer">
+              <div class="service-item__price">
+                от 3000 <span class="rubl">c</span>
+              </div>
+              <button type="button" class="btn-service">Заказать</button>
+            </footer>
+          </article>
+        </div>
+        <div>
+          <article class="service-item">
+            <h3 class="service-item__title">SEO - продвижение сайта</h3>
+            <div class="service-item__desc">
+              Наша команда сделала все для того, чтобы создать уникальные шаблоны, у каждого нашего клиента получается персонализированный сайт.
+            </div>
+            <footer class="service-item__footer">
+              <div class="service-item__price">
+                от 3000 <span class="rubl">c</span>
+              </div>
+              <button type="button" class="btn-service">Заказать</button>
+            </footer>
+          </article>
+        </div>
+        <div>
+          <article class="service-item">
+            <h3 class="service-item__title">SEO - продвижение сайта</h3>
+            <div class="service-item__desc">
+              Наша команда сделала все для того, чтобы создать уникальные шаблоны, у каждого нашего клиента получается персонализированный сайт.
+            </div>
+            <footer class="service-item__footer">
+              <div class="service-item__price">
+                от 3000 <span class="rubl">c</span>
+              </div>
+              <button type="button" class="btn-service">Заказать</button>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="request">
+    <div class="uk-container">
+      <h2 class="request__section-title section-title section-title--dark">Оставить заявку</h2>
+      <form class="request-form" aria-label="Форма заявки">
+        <div class="request-form__row">
+          <label class="request-form__label" for="request-name">Ваше имя</label>
+          <input class="request-form__input uk-input" id="request-name" type="text" name="request-name" required>
+        </div>
+        <div class="request-form__row">
+          <label class="request-form__label" for="request-tel">Телефон</label>
+          <input class="request-form__input uk-input" id="request-tel" type="tel" name="request-tel" required>
+        </div>
+        <button class="request-form__submit" type="submit">Отправить</button>
+      </form>
+    </div>
+  </section>
+  <footer class="main-footer">
+    <div class="main-footer__wrapper">
+      <div class="main-footer__links">
+        <a class="main-footer__link" href="#">Политика конфиденциальности</a>
+        <a class="main-footer__link" href="#">Пользовательское соглашение</a>
+      </div>
+      <div class="main-footer__rightside">
+        <nav class="main-footer__main-nav main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Преимущества</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Что вы получите</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Каталог сайтов</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Примеры работ</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Услуги</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="btn-order">Заказать сайт</button>
+      </div>
+    </div>
+  </footer>
   <script src="bundle.js"></script>
 </body>
 

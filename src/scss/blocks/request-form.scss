@@ -1,0 +1,41 @@
+.request-form {
+  display: flex;
+  align-items: flex-end;
+}
+
+.request-form__row {
+  margin-right: 50px;
+}
+
+.request-form__label {
+  display: block;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.request-form__input {
+  width: 390px;
+  height: 47px;
+  box-shadow: 2px 3px 10px rgba(104, 106, 108, 0.26);
+  background-color: #fff;
+}
+
+.request-form__submit {
+  @include reset-btn;
+  min-width: 260px;
+  box-sizing: border-box;
+  padding: 17px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 4px 6px 15px rgba(57, 51, 62, 0.55);
+  background-color: #1a1024;
+  cursor: pointer;
+  &:focus {
+    outline: 3px solid #672aa0;
+  }
+}
