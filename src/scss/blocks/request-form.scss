@@ -1,10 +1,19 @@
 .request-form {
   display: flex;
   align-items: flex-end;
+  justify-content: center;
+  @media (max-width: $breakpoint-large) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .request-form__row {
   margin-right: 50px;
+  @media (max-width: $breakpoint-large) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .request-form__label {
@@ -21,6 +30,12 @@
   height: 47px;
   box-shadow: 2px 3px 10px rgba(104, 106, 108, 0.26);
   background-color: #fff;
+  @media (max-width: $breakpoint-xlarge) {
+    width: 320px;
+  }
+  @media (max-width: $breakpoint-medium) {
+    width: 290px;
+  }
 }
 
 .request-form__submit {
@@ -37,5 +52,8 @@
   cursor: pointer;
   &:focus {
     outline: 3px solid #672aa0;
+  }
+  @media (max-width: $breakpoint-medium) {
+    width: 290px;
   }
 }

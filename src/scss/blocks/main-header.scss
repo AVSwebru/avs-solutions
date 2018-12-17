@@ -10,6 +10,7 @@
 }
 
 .main-header__logo-wrapper {
+  @include reset-link;
   display: flex;
   align-items: center;
 }

@@ -12,7 +12,7 @@
 <body class="page">
   <header class="main-header" data-uk-sticky>
     <div class="main-header__wrapper">
-      <div class="main-header__logo-wrapper">
+      <a class="main-header__logo-wrapper" href="#" title="Веб-студия 'AVS-WEB'">
         <img class="main-header__logo-pic" src="img/logo.svg" width="50" height="50" alt="Логотоп">
         <div>
           <div class="main-header__logo-stidio-title">
@@ -22,11 +22,12 @@
             веб-студия
           </div>
         </div>
-      </div>
+      </a>
       <div class="main-header__rightside">
         <nav class="main-header__main-nav main-nav">
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Преимущества</a></li>
+            <li class="main-nav__item"><a href="#" class="main-nav__link">Преимущества</a>
+            </li>
             <li class="main-nav__item"><a href="#" class="main-nav__link">Что вы получите</a></li>
             <li class="main-nav__item"><a href="#" class="main-nav__link">Каталог сайтов</a></li>
             <li class="main-nav__item"><a href="#" class="main-nav__link">Примеры работ</a></li>
@@ -78,9 +79,7 @@
         <svg class="intro__pyramid-2">
           <use xlink:href="/img/sprite.svg#pyramid"/>
         </svg>
-        <svg class="intro__triangle">
-          <use xlink:href="/img/sprite.svg#triangle"/>
-        </svg>
+        <img class="intro__triangle" src="img/triangle.svg" alt="">
       </div>
     </div>
   </div>
@@ -174,7 +173,7 @@
   <section class="result">
     <div class="uk-container">
       <h2 class="result__section-title section-title section-title--dark">
-        Преимущества готовых сайтов
+        Что вы получите
       </h2>
       <div class="result__grid">
         <div>
@@ -322,7 +321,7 @@
                 <label class="catalog-filter__label" for="catalog-theme-furniture">Мебель на заказ</label>
              </div>
             </fieldset>
-            <input class="catalog-filter__accept-btn" type="button" value="Подобрать">
+            <input class="btn-order" type="button" value="Подобрать">
           </form>
 
         </div>
@@ -334,179 +333,182 @@
       <h2 class="examples__section-title section-title section-title--light">
         Примеры работ
       </h2>
-      <div class="examples__wrapper uk-position-relative" data-uk-slideshow="animation: fade">
+      <div class="examples__wrapper">
         <div>
-          <ul class="examples__thumbnav uk-thumbnav">
-          <li class="examples__thumbnav-item" data-uk-slideshow-item="0">
-            <a class="examples__thumbnav-link" href="#">
-              <img class="examples__thumbnav-image" src="img/examples-thumbnav-1.jpg" alt="">
-            </a>
-          </li>
-          <li class="examples__thumbnav-item" data-uk-slideshow-item="1">
-            <a class="examples__thumbnav-link" href="#">
-              <img class="examples__thumbnav-image" src="img/examples-thumbnav-2.jpg" alt="">
-            </a>
-          </li>
-          <li class="examples__thumbnav-item" data-uk-slideshow-item="2">
-            <a class="examples__thumbnav-link" href="#">
-              <img class="examples__thumbnav-image" src="img/examples-thumbnav-3.jpg" alt="">
-            </a>
-          </li>
-          <li class="examples__thumbnav-item" data-uk-slideshow-item="3">
-            <a class="examples__thumbnav-link" href="#">
-              <img class="examples__thumbnav-image" src="img/examples-thumbnav-1.jpg" alt="">
-            </a>
-          </li>
-          <li class="examples__thumbnav-item" data-uk-slideshow-item="4">
-            <a class="examples__thumbnav-link" href="#">
-              <img class="examples__thumbnav-image" src="img/examples-thumbnav-2.jpg" alt="">
-            </a>
-          </li>
-          <li class="examples__thumbnav-item" data-uk-slideshow-item="5">
-            <a class="examples__thumbnav-link" href="#">
-              <img class="examples__thumbnav-image" src="img/examples-thumbnav-3.jpg" alt="">
-            </a>
-          </li>
-          <li class="examples__thumbnav-item" data-uk-slideshow-item="6">
-            <a class="examples__thumbnav-link" href="#">
-              <img class="examples__thumbnav-image" src="img/examples-thumbnav-1.jpg" alt="">
-            </a>
-          </li>
-          <li class="examples__thumbnav-item" data-uk-slideshow-item="7">
-            <a class="examples__thumbnav-link" href="#">
-              <img class="examples__thumbnav-image" src="img/examples-thumbnav-2.jpg" alt="">
-            </a>
-          </li>
-          <li class="examples__thumbnav-item" data-uk-slideshow-item="8">
-            <a class="examples__thumbnav-link" href="#">
-              <img class="examples__thumbnav-image" src="img/examples-thumbnav-3.jpg" alt="">
-            </a>
-          </li>
-          <li class="examples__thumbnav-item" data-uk-slideshow-item="9">
-            <a class="examples__thumbnav-link" href="#">
-              <img class="examples__thumbnav-image" src="img/examples-thumbnav-1.jpg" alt="">
-            </a>
-          </li>
-        </ul>
+          <ul class="examples__thumbnav uk-thumbnav" data-uk-switcher="connect: .examples__items">
+            <li class="examples__thumbnav-item">
+              <a class="examples__thumbnav-link" data-uk-switcher-item="0" href="#">
+                <img class="examples__thumbnav-image" src="img/examples-thumbnav-1.jpg" alt="">
+              </a>
+            </li>
+            <li class="examples__thumbnav-item">
+              <a class="examples__thumbnav-link" data-uk-switcher-item="1" href="#">
+                <img class="examples__thumbnav-image" src="img/examples-thumbnav-2.jpg" alt="">
+              </a>
+            </li>
+            <li class="examples__thumbnav-item">
+              <a class="examples__thumbnav-link" data-uk-switcher-item="2" href="#">
+                <img class="examples__thumbnav-image" src="img/examples-thumbnav-3.jpg" alt="">
+              </a>
+            </li>
+            <li class="examples__thumbnav-item">
+              <a class="examples__thumbnav-link" data-uk-switcher-item="3" href="#">
+                <img class="examples__thumbnav-image" src="img/examples-thumbnav-1.jpg" alt="">
+              </a>
+            </li>
+            <li class="examples__thumbnav-item">
+              <a class="examples__thumbnav-link" data-uk-switcher-item="4" href="#">
+                <img class="examples__thumbnav-image" src="img/examples-thumbnav-2.jpg" alt="">
+              </a>
+            </li>
+            <li class="examples__thumbnav-item">
+              <a class="examples__thumbnav-link" data-uk-switcher-item="5" href="#">
+                <img class="examples__thumbnav-image" src="img/examples-thumbnav-3.jpg" alt="">
+              </a>
+            </li>
+            <li class="examples__thumbnav-item">
+              <a class="examples__thumbnav-link" data-uk-switcher-item="6" href="#">
+                <img class="examples__thumbnav-image" src="img/examples-thumbnav-1.jpg" alt="">
+              </a>
+            </li>
+            <li class="examples__thumbnav-item">
+              <a class="examples__thumbnav-link" data-uk-switcher-item="7" href="#">
+                <img class="examples__thumbnav-image" src="img/examples-thumbnav-2.jpg" alt="">
+              </a>
+            </li>
+            <li class="examples__thumbnav-item">
+              <a class="examples__thumbnav-link" data-uk-switcher-item="8" href="#">
+                <img class="examples__thumbnav-image" src="img/examples-thumbnav-3.jpg" alt="">
+              </a>
+            </li>
+          </ul>
         </div>
         <div>
-          <div class="examples__nav">
-            <a class="examples__nav-link examples__nav-link--left" href="#" data-uk-slideshow-item="previous">← Предыдущая работа</a>
-            <a class="examples__nav-link examples__nav-link--right" href="#" data-uk-slideshow-item="next">Следующая работа →</a>
-          </div>
-          <ul class="examples__items uk-slideshow-items">
-          <li>
-            <div class="examples__content">
-              <div>
-                <div class="examples__large-item">
-                  <a class="examples__large-item-wrapper uk-cover-container" href="#">
-                    <img class="examples__image" data-uk-cover src="img/example-1.jpg" alt="">
-                    <div class="examples__type">
-                      Шаблон
-                    </div>
-                  </a>
-                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+          <ul class="examples__items uk-switcher">
+            <li>
+              <div class="examples__nav">
+                <a class="examples__nav-link examples__nav-link--left" href="#" data-uk-switcher-item="previous">← Предыдущая работа</a>
+                <a class="examples__nav-link examples__nav-link--right" href="#" data-uk-switcher-item="next">Следующая работа →</a>
+              </div>
+              <div class="examples__content">
+                <div>
+                  <div class="examples__large-item">
+                    <a class="examples__large-item-wrapper uk-cover-container" href="#">
+                      <img class="examples__image" data-uk-cover src="img/example-1.jpg" alt="">
+                      <div class="examples__type">
+                        Шаблон
+                      </div>
+                    </a>
+                    <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                  </div>
+                </div>
+                <div>
+                  <div class="examples__small-item">
+                    <a class="examples__small-item-wrapper uk-cover-container" href="#">
+                      <img class="examples__image" data-uk-cover src="img/example-2.jpg" alt="">
+                      <div class="examples__type">
+                        Результат
+                      </div>
+                    </a>
+                    <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                  </div>
+                </div>
+                <div>
+                  <div class="examples__small-item">
+                    <a class="examples__small-item-wrapper uk-cover-container" href="#">
+                      <img class="examples__image" data-uk-cover src="img/example-3.jpg" alt="">
+                      <div class="examples__type">
+                        Результат
+                      </div>
+                    </a>
+                    <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                  </div>
                 </div>
               </div>
-              <div>
-                <div class="examples__small-item">
-                  <a class="examples__small-item-wrapper uk-cover-container" href="#">
-                    <img class="examples__image" data-uk-cover src="img/example-2.jpg" alt="">
-                    <div class="examples__type">
-                      Результат
-                    </div>
-                  </a>
-                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+            </li>
+            <li>
+              <div class="examples__nav">
+                <a class="examples__nav-link examples__nav-link--left" href="#" data-uk-switcher-item="previous">← Предыдущая работа</a>
+                <a class="examples__nav-link examples__nav-link--right" href="#" data-uk-switcher-item="next">Следующая работа →</a>
+              </div>
+              <div class="examples__content">
+                <div>
+                  <div class="examples__large-item">
+                    <a class="examples__large-item-wrapper uk-cover-container" href="#">
+                      <img data-uk-cover src="img/example-3.jpg" alt="">
+                      <div class="examples__type">
+                        Шаблон
+                      </div>
+                    </a>
+                    <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                  </div>
+                </div>
+                <div>
+                  <div class="examples__small-item">
+                    <a class="examples__small-item-wrapper uk-cover-container" href="#">
+                      <img data-uk-cover src="img/example-1.jpg" alt="">
+                      <div class="examples__type">
+                        Результат
+                      </div>
+                    </a>
+                    <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                  </div>
+                </div>
+                <div>
+                  <div class="examples__small-item">
+                    <a class="examples__small-item-wrapper uk-cover-container" href="#">
+                      <img data-uk-cover src="img/example-2.jpg" alt="">
+                      <div class="examples__type">
+                        Результат
+                      </div>
+                    </a>
+                    <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                  </div>
                 </div>
               </div>
-              <div>
-                <div class="examples__small-item">
-                  <a class="examples__small-item-wrapper uk-cover-container" href="#">
-                    <img class="examples__image" data-uk-cover src="img/example-3.jpg" alt="">
-                    <div class="examples__type">
-                      Результат
-                    </div>
-                  </a>
-                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+            </li>
+            <li>
+              <div class="examples__nav">
+                <a class="examples__nav-link examples__nav-link--left" href="#" data-uk-switcher-item="previous">← Предыдущая работа</a>
+                <a class="examples__nav-link examples__nav-link--right" href="#" data-uk-switcher-item="next">Следующая работа →</a>
+              </div>
+              <div class="examples__content">
+                <div>
+                  <div class="examples__large-item">
+                    <a class="examples__large-item-wrapper uk-cover-container" href="#">
+                      <img data-uk-cover src="img/example-3.jpg" alt="">
+                      <div class="examples__type">
+                        Шаблон
+                      </div>
+                    </a>
+                    <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                  </div>
+                </div>
+                <div>
+                  <div class="examples__small-item">
+                    <a class="examples__small-item-wrapper uk-cover-container" href="#">
+                      <img data-uk-cover src="img/example-2.jpg" alt="">
+                      <div class="examples__type">
+                        Результат
+                      </div>
+                    </a>
+                    <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                  </div>
+                </div>
+                <div>
+                  <div class="examples__small-item">
+                    <a class="examples__small-item-wrapper uk-cover-container" href="#">
+                      <img data-uk-cover src="img/example-1.jpg" alt="">
+                      <div class="examples__type">
+                        Результат
+                      </div>
+                    </a>
+                    <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="examples__content">
-              <div>
-                <div class="examples__large-item">
-                  <a class="examples__large-item-wrapper uk-cover-container" href="#">
-                    <img data-uk-cover src="img/example-3.jpg" alt="">
-                    <div class="examples__type">
-                      Шаблон
-                    </div>
-                  </a>
-                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
-                </div>
-              </div>
-              <div>
-                <div class="examples__small-item">
-                  <a class="examples__small-item-wrapper uk-cover-container" href="#">
-                    <img data-uk-cover src="img/example-1.jpg" alt="">
-                    <div class="examples__type">
-                      Результат
-                    </div>
-                  </a>
-                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
-                </div>
-              </div>
-              <div>
-                <div class="examples__small-item">
-                  <a class="examples__small-item-wrapper uk-cover-container" href="#">
-                    <img data-uk-cover src="img/example-2.jpg" alt="">
-                    <div class="examples__type">
-                      Результат
-                    </div>
-                  </a>
-                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="examples__content">
-              <div>
-                <div class="examples__large-item">
-                  <a class="examples__large-item-wrapper uk-cover-container" href="#">
-                    <img data-uk-cover src="img/example-3.jpg" alt="">
-                    <div class="examples__type">
-                      Шаблон
-                    </div>
-                  </a>
-                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
-                </div>
-              </div>
-              <div>
-                <div class="examples__small-item">
-                  <a class="examples__small-item-wrapper uk-cover-container" href="#">
-                    <img data-uk-cover src="img/example-2.jpg" alt="">
-                    <div class="examples__type">
-                      Результат
-                    </div>
-                  </a>
-                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
-                </div>
-              </div>
-              <div>
-                <div class="examples__small-item">
-                  <a class="examples__small-item-wrapper uk-cover-container" href="#">
-                    <img data-uk-cover src="img/example-1.jpg" alt="">
-                    <div class="examples__type">
-                      Результат
-                    </div>
-                  </a>
-                  <a class="examples__link" href="#">Готовый сайт фитнес-центра</a>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

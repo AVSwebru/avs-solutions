@@ -5,8 +5,8 @@
 
 .template-item__image-wrapper {
   display: block;
-  margin-bottom: 20px;
-  padding-top: 75%;
+  margin-bottom: 16px;
+  padding-top: 86%;
   &:hover + .template-item__title-link {
     .template-item__title {
       color: #672aa0;
@@ -17,7 +17,7 @@
 .template-item__title-link {
   @include reset-link;
   display: block;
-  margin-bottom: 27px;
+  margin-bottom: 15px;
   &:hover {
     .template-item__title {
       color: #672aa0;

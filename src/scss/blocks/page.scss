@@ -1,3 +1,6 @@
 .page {
   padding: 0 50px;
+  @media (max-width: $breakpoint-small) {
+    padding: 0;
+  }
 }

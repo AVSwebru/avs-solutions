@@ -25,11 +25,13 @@
   justify-content: center;
   width: calc(100% - 90px);
   height: calc(100% - 90px);
+  box-sizing: border-box;
+  padding-top: 23px;
   background-image: linear-gradient(45deg, #672aa0 0%, #742ede 72%, #832ac1 100%);
 }
 
 .intro__title {
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   color: #fff;
   font-size: 48px;
   font-weight: 700;
@@ -38,18 +40,24 @@
 }
 
 .intro__request-btn {
-    @include reset-btn;
-    min-width: 215px;
-    box-sizing: border-box;
-    padding: 18px;
-    color: #000;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1;
-    text-align: center;
-    box-shadow: 3px 5px 18px rgba(61, 23, 116, 0.51);
-    background-color: #fff;
-    cursor: pointer;
+  @include reset-btn;
+  min-width: 215px;
+  box-sizing: border-box;
+  padding: 16px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  border: 2px solid transparent;
+  box-shadow: 3px 5px 18px rgba(61, 23, 116, 0.51);
+  background-color: #fff;
+  cursor: pointer;
+  &:hover {
+    border-color: #fff;
+    background-image: linear-gradient(45deg, #00cec0 0%, #672aa0 99%, #672aa0 100%);
+    color: #fff;
+  }
 }
 
 .intro__rect-1 {
@@ -228,9 +236,8 @@
 
 .intro__triangle {
   position: absolute;
-  left: 63.5%;
-  top: 79%;
-  width: 50px;
-  height: 50px;
-  color: #fff;
+  left: 78%;
+  top: 90%;
+  width: 120px;
+  height: 120px;
 }

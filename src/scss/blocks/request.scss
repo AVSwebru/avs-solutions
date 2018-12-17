@@ -2,8 +2,17 @@
   padding: 90px 0 125px;
   background: #f0f1fd url('../../img/bg-request.jpg') 50% 50% no-repeat;
   background-size: cover;
+  @media (max-width: $breakpoint-medium) {
+    padding: 60px 0 90px;
+  }
 }
 
 .request__section-title {
   margin-bottom: 90px;
+  @media (max-width: $breakpoint-medium) {
+    margin-bottom: 55px;
+  }
+  @media (max-width: $breakpoint-small) {
+    margin-bottom: 35px;
+  }
 }

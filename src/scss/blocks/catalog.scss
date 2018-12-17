@@ -1,6 +1,9 @@
 .catalog {
   padding: 80px 0 170px;
   background-color: #eeeaf2;
+  @media (max-width: $breakpoint-medium) {
+    padding: 60px 0 90px;
+  }
 }
 
 .catalog__section-title {
@@ -14,10 +17,19 @@
 
 .catalog__wrapper {
   display: grid;
-  grid-template-columns: 850px 200px;
-  grid-gap: 100px;
+  grid-template-columns: 4fr 1fr;
+  grid-gap: 83px;
   padding-top: 50px;
   border-top: 1px solid #d3cfd7;
+  @media (max-width: $breakpoint-medium) {
+    grid-template-columns: 100%;
+    & > div:first-child {
+      order: 2;
+    }
+    & > div:last-child {
+      order: 1;
+    }
+  }
 }
 
 .catalog__grid {
@@ -43,4 +55,5 @@
   font-size: 14px;
   font-weight: 500;
   transform: translateX(-50%);
+  cursor: pointer;
 }
