@@ -1,6 +1,9 @@
 .main-header {
   padding: 25px 0;
   background-color: #fff;
+  @media (max-width: $breakpoint-small) {
+    padding: 25px 15px;
+  }
 }
 
 .main-header__wrapper {
@@ -39,6 +42,9 @@
 .main-header__rightside {
   display: flex;
   align-items: center;
+  @media (max-width: $breakpoint-large) {
+    display: none;
+  }
 }
 
 .main-header__main-nav {

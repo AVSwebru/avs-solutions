@@ -1,16 +1,25 @@
 .intro {
-  height: 760px;
+  min-height: 760px;
   padding: 90px 0;
   box-sizing: border-box;
-  background-image: linear-gradient(45deg, #672aa0 0%, #742ede 72%, #832ac1 100%);
+  background: #4959a9 linear-gradient(45deg, #672aa0 0%, #6137ec 50%, #8b19c0 100%) 0% 50% no-repeat;
+  background-size: 200% 100%;
+  animation: 5s ease-out infinite blinking;
+  @media (max-width: $breakpoint-small) {
+    min-height: auto;
+    padding: 45px 0;
+  }
 }
 
 .intro__body {
   position: relative;
-  height: 580px;
+  min-height: 580px;
   background: #fff url('../../img/bg-intro.jpg') 50% 50% no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  @media (max-width: $breakpoint-small) {
+    min-height: 400px;
+  }
 }
 
 .intro__inner {
@@ -27,7 +36,19 @@
   height: calc(100% - 90px);
   box-sizing: border-box;
   padding-top: 23px;
-  background-image: linear-gradient(45deg, #672aa0 0%, #742ede 72%, #832ac1 100%);
+  background: #4959a9 linear-gradient(45deg, #672aa0 0%, #6137ec 50%, #8b19c0 100%) 0% 50% no-repeat;
+  background-size: 200% 100%;
+  animation: 5s ease-out infinite blinking;
+  text-align: center;
+  @media (max-width: $breakpoint-small) {
+    top: 25px;
+    right: 25px;
+    bottom: 25px;
+    left: 25px;
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    padding: 23px 10px 0;
+  }
 }
 
 .intro__title {
@@ -37,17 +58,20 @@
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
+  @media (max-width: $breakpoint-medium) {
+    font-size: 34px;
+  }
+  @media (max-width: $breakpoint-small) {
+    font-size: 28px;
+  }
 }
 
 .intro__request-btn {
   @include reset-btn;
+  position: relative;
   min-width: 215px;
   box-sizing: border-box;
   padding: 16px;
-  color: #000;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1;
   text-align: center;
   border: 2px solid transparent;
   box-shadow: 3px 5px 18px rgba(61, 23, 116, 0.51);
@@ -55,9 +79,40 @@
   cursor: pointer;
   &:hover {
     border-color: #fff;
-    background-image: linear-gradient(45deg, #00cec0 0%, #672aa0 99%, #672aa0 100%);
-    color: #fff;
+    .intro__request-btn-text {
+      color: #fff;
+      transition: color 0.25s;
+    }
+    .intro__request-btn-bg {
+      transform: scale(1);
+      transition: transform 0.25s;
+    }
   }
+  @media (max-width: $breakpoint-small) {
+    min-width: 160px;
+  }
+}
+
+.intro__request-btn-text {
+  position: relative;
+  z-index: 2;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  transition: color 0.25s;
+}
+
+.intro__request-btn-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transform: scale(0);
+  background: #672aa0;
+  transition: transform 0.25s;
 }
 
 .intro__rect-1 {
@@ -68,6 +123,8 @@
   padding-top: 9%;
   border: 4px solid #fff;
   background-color: transparent;
+  transform-origin: 50% 50%;
+  animation: 10s ease infinite alternate border-change ;
 }
 
 .intro__rect-2 {
@@ -78,7 +135,9 @@
   padding-top: 5%;
   border: 4px solid #00c6cd;
   background-color: transparent;
+  transform-origin: 50% 50%;
   transform: rotate(45deg);
+  animation: 10s ease infinite alternate rect-rotate;
 }
 
 .intro__rect-3 {
@@ -90,6 +149,7 @@
   border: 4px solid #fff;
   background-color: transparent;
   transform: rotate(45deg);
+  animation: 10s 1s ease infinite alternate rect-rotate;
 }
 
 .intro__circle-1 {
@@ -100,6 +160,7 @@
   padding-top: 2.5%;
   background-color: #facc3e;
   border-radius: 50%;
+  animation: 10s ease infinite pulsation;
 }
 
 .intro__circle-2 {
@@ -110,26 +171,7 @@
   padding-top: 2.5%;
   background-color: #00cec0;
   border-radius: 50%;
-}
-
-.intro__rectangle-1 {
-  position: absolute;
-  top: 27%;
-  left: 94.7%;
-  width: 2.5%;
-  padding-top: 2.5%;
-  background-color: #00cec0;
-  border-radius: 50%;
-}
-
-.intro__rectangle-2 {
-  position: absolute;
-  top: 27%;
-  left: 94.7%;
-  width: 2.5%;
-  padding-top: 2.5%;
-  background-color: #00cec0;
-  border-radius: 50%;
+  animation: 10s 3s ease infinite pulsation;
 }
 
 .intro__stick-1 {
@@ -139,6 +181,10 @@
   width: 150px;
   height: 150px;
   color: #fff;
+  animation: 5s ease-in-out infinite alternate stick-move;
+  @media (max-width: $breakpoint-medium) {
+    display: none;
+  }
 }
 
 .intro__stick-2 {
@@ -148,6 +194,10 @@
   width: 170px;
   height: 170px;
   color: #00cec0;
+  animation: 5s 2s ease-in-out infinite alternate stick-move;
+  @media (max-width: $breakpoint-medium) {
+    display: none;
+  }
 }
 
 .intro__stick-3 {
@@ -157,6 +207,10 @@
   width: 150px;
   height: 150px;
   color: #facc3e;
+  animation: 5s 5s ease-in-out infinite alternate stick-move;
+  @media (max-width: $breakpoint-medium) {
+    display: none;
+  }
 }
 
 .intro__stick-4 {
@@ -166,6 +220,10 @@
   width: 170px;
   height: 170px;
   color: #00cec0;
+  animation: 5s 8s ease-in-out infinite alternate stick-move;
+  @media (max-width: $breakpoint-medium) {
+    display: none;
+  }
 }
 
 .intro__half-triangle-1 {
@@ -176,6 +234,8 @@
   height: 34px;
   background: linear-gradient(45deg, transparent 50%, #facc3e 50%) 50% 50% no-repeat;
   background-size: cover;
+  transform-origin: 50% 50%;
+  animation: 15s ease-in infinite half-triangle-rotation;
 }
 
 .intro__half-triangle-2 {
@@ -186,6 +246,8 @@
   height: 34px;
   background: linear-gradient(45deg, transparent 50%, #fff 50%) 50% 50% no-repeat;
   background-size: cover;
+  transform-origin: 50% 50%;
+  animation: 15s ease-in infinite half-triangle-rotation;
 }
 
 .intro__rings-1 {
@@ -195,6 +257,11 @@
   width: 50px;
   height: 50px;
   color: #00c6cd;
+  transform: scale(0.1);
+  animation: 9s ease infinite alternate stepped-scale-up;
+  @media (max-width: $breakpoint-medium) {
+    top: 67%;
+  }
 }
 
 .intro__rings-2 {
@@ -204,6 +271,12 @@
   width: 80px;
   height: 80px;
   color: #facc3e;
+  transform: scale(0.1);
+  animation: 10s ease infinite alternate stepped-scale-up;
+  @media (max-width: $breakpoint-medium) {
+    left: 4%;
+    top: 91%;
+  }
 }
 
 .intro__rings-3 {
@@ -213,6 +286,8 @@
   width: 130px;
   height: 130px;
   color: #00c6cd;
+  transform: scale(0.1);
+  animation: 11s ease infinite alternate stepped-scale-up;
 }
 
 .intro__pyramid-1 {
@@ -222,6 +297,7 @@
   width: 45px;
   height: 45px;
   color: #00c6cd;
+  animation: 15s ease-in infinite skew-shape;
 }
 
 .intro__pyramid-2 {
@@ -232,6 +308,7 @@
   height: 50px;
   color: #fff;
   transform: scale(-1);
+  animation: 15s ease-in infinite skew-shape;
 }
 
 .intro__triangle {
@@ -240,4 +317,6 @@
   top: 90%;
   width: 120px;
   height: 120px;
+  transform-origin: 50% 50%;
+  animation: 25s linear infinite triangle-rotate;
 }

@@ -1,0 +1,15 @@
+.menu-adapt {
+  display: none;
+  padding-bottom: 44px;
+  background-color: #fff;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  @media (max-width: $breakpoint-large) {
+    &.active {
+      display: block;
+    }
+  }
+}

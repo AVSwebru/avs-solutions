@@ -1,11 +1,21 @@
 .main-footer {
   padding: 45px 0;
+  @media (max-width: $breakpoint-small) {
+    padding: 45px 15px;
+  }
 }
 
 .main-footer__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.main-footer__links {
+  @media (max-width: $breakpoint-large) {
+    order: 2;
+  }
 }
 
 .main-footer__link {
@@ -26,8 +36,22 @@
 .main-footer__rightside {
   display: flex;
   align-items: center;
+  @media (max-width: $breakpoint-large) {
+    order: 1;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  @media (max-width: $breakpoint-medium) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .main-footer__main-nav {
   margin-right: 45px;
+  @media (max-width: $breakpoint-medium) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }

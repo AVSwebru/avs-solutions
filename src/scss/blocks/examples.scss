@@ -1,6 +1,9 @@
 .examples {
   padding: 90px 0 155px;
   background-color: #25202a;
+  @media (max-width: $breakpoint-small) {
+    padding: 60px 0 90px;
+  }
 }
 
 .examples__section-title {

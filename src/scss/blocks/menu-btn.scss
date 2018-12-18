@@ -1,0 +1,53 @@
+.menu-btn {
+  @include reset-btn;
+  position: relative;
+  z-index: 2;
+  display: none;
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
+  cursor: pointer;
+  @media (max-width: $breakpoint-large) {
+    display: flex;
+  }
+  &.active {
+    .menu-btn__line-1 {
+      top: 20px;
+      transform: rotate(40deg);
+      transition: top 0.3s, transform 0.2s 0.3s;
+    }
+    .menu-btn__line-2 {
+      opacity: 0;
+        transition: opacity 0.25s,
+    }
+    .menu-btn__line-3 {
+      top: 20px;
+      transform: rotate(-40deg);
+      transition: top 0.3s, transform 0.2s 0.3s;
+    }
+  }
+}
+
+.menu-btn__line {
+  position: absolute;
+  left: 7px;
+  width: 30px;
+  height: 2px;
+  background-color: #767676;
+  transform-origin: 50% 50%;
+}
+
+.menu-btn__line-1 {
+  top: 28px;
+  transition: transform 0.3s, top 0.2s 0.3s;
+}
+
+.menu-btn__line-2 {
+  top: 21px;
+  transition: opacity 0.25s,
+}
+
+.menu-btn__line-3 {
+  top: 14px;
+  transition: transform 0.3s, top 0.2s 0.3s;
+}

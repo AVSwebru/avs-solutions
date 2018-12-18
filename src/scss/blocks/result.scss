@@ -18,7 +18,7 @@
 
 .result__grid {
   display: grid;
-  grid-template-columns: auto 190px;
+  grid-template-columns: 1.2fr 1fr;
   grid-gap: 70px;
   @media (max-width: $breakpoint-medium) {
     grid-template-columns: 100%;

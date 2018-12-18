@@ -2,6 +2,14 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  &_modal {
+    flex-direction: column;
+    align-items: flex-start;
+    .request-form__row {
+      margin-right: 0;
+      margin-bottom: 36px;
+    }
+  }
   @media (max-width: $breakpoint-large) {
     flex-direction: column;
     align-items: center;
@@ -53,7 +61,10 @@
   &:focus {
     outline: 3px solid #672aa0;
   }
+  @media (max-width: $breakpoint-large) {
+    min-width: 320px;
+  }
   @media (max-width: $breakpoint-medium) {
-    width: 290px;
+    min-width: 290px;
   }
 }
