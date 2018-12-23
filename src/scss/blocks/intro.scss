@@ -14,7 +14,7 @@
 .intro__body {
   position: relative;
   min-height: 580px;
-  background: #fff url('../../img/bg-intro.jpg') 50% 50% no-repeat;
+  background: #fff url('../img/bg-intro.jpg') 50% 50% no-repeat;
   background-size: cover;
   background-attachment: fixed;
   @media (max-width: $breakpoint-small) {
