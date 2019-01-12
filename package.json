@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development --color --progress --watch",
+    "dev": "webpack-dev-server --mode=development --color --progress --watch --open",
     "build": "webpack --mode=production"
   },
   "author": "",
@@ -38,7 +38,6 @@
     "webpack-dev-server": "^3.1.5"
   },
   "devDependencies": {
-    "eslint": "^5.0.1",
-    "clean-webpack-plugin": "^0.1.19"
+    "eslint": "^5.0.1"
   }
 }

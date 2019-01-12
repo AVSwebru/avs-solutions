@@ -4,43 +4,33 @@ const env = process.env.WEBPACK_ENV;
 // const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const PATHS = {
-  source: path.join(__dirname, 'src/'),
-  build: path.join(__dirname, 'dist/')
+  source: path.join(__dirname, 'src'),
+  build: path.join(__dirname, 'build')
 };
-
-// let pathsToClean = ['dist']
-//
-// let cleanOptions = {
-//   root: __dirname,
-//   dry: false,
-//   watch: false,
-//   allowExternal: false
-// }
 
 module.exports = {
   entry: {
-    main: PATHS.source + 'index.js'
+    main: PATHS.source + '/index.js'
   },
   output: {
     path: PATHS.build,
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
+  devtool: 'source-map',
   devServer: {
     port: 9000,
-    index: 'index.html',
     compress: true,
-    hot: true,
-    inline: true,
     open: true,
-    overlay: true
+    overlay: true,
+    contentBase: PATHS.build
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
         exclude: /node_modules/,
-        options: {
+        loader: 'babel-loader',
+        query: {
           presets: ['es2015']
         }
       },
@@ -50,8 +40,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'main.css',
-              outputPath: 'css/',
+              name: 'css/main.css'
             }
           },
           {
@@ -60,8 +49,8 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              url: false,
-              minimize: env === 'production' ? true : false
+              minimize: env === 'production' ? true : false,
+              url: false
             }
           },
           {
@@ -135,6 +124,6 @@ module.exports = {
     }
   },
   plugins: [
-    // new CleanWebpackPlugin(pathsToClean, cleanOptions)
+    new webpack.HotModuleReplacementPlugin()
   ]
 };
