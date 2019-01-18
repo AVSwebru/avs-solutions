@@ -6,8 +6,12 @@
 
 .callback__title {
   margin-bottom: 40px;
+  text-align: center;
   color: #010101;
   font-size: 48px;
   font-weight: 700;
-  line-height: 38px;
+  line-height: 1;
+  @media (max-width: $breakpoint-small) {
+    font-size: 36px;
+  }
 }

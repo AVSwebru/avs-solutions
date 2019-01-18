@@ -17,7 +17,7 @@
 
 .catalog__wrapper {
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: auto 210px;
   grid-gap: 83px;
   padding-top: 50px;
   border-top: 1px solid #d3cfd7;
@@ -39,6 +39,9 @@
   grid-gap: 30px;
   padding-bottom: 85px;
   border-bottom: 1px solid #d3cfd7;
+  @media (max-width: $breakpoint-medium) {
+    justify-content: center;
+  }
 }
 
 .catalog__show-more {

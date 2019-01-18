@@ -10755,7 +10755,7 @@ iframe.uk-cover {
 
 .catalog__wrapper {
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: auto 210px;
   grid-gap: 83px;
   padding-top: 50px;
   border-top: 1px solid #d3cfd7; }
@@ -10774,6 +10774,9 @@ iframe.uk-cover {
   grid-gap: 30px;
   padding-bottom: 85px;
   border-bottom: 1px solid #d3cfd7; }
+  @media (max-width: 960px) {
+    .catalog__grid {
+      justify-content: center; } }
 
 .catalog__show-more {
   padding: 0;
@@ -11191,7 +11194,9 @@ iframe.uk-cover {
   flex-wrap: wrap; }
   @media (max-width: 960px) {
     .catalog-filter {
-      flex-direction: row; } }
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; } }
 
 .catalog-filter__section {
   margin: 0 0 20px;
@@ -11244,7 +11249,7 @@ iframe.uk-cover {
     display: none;
     content: '';
     position: absolute;
-    top: 3px;
+    top: 5px;
     left: 5px;
     width: 15px;
     height: 13px;
@@ -11264,6 +11269,11 @@ iframe.uk-cover {
   line-height: 1;
   background-color: #672aa0;
   cursor: pointer; }
+
+.catalog-filter__price-input {
+  display: block;
+  max-width: 220px;
+  margin-bottom: 10px; }
 
 .menu-btn {
   padding: 0;
@@ -11375,7 +11385,11 @@ iframe.uk-cover {
 
 .callback__title {
   margin-bottom: 40px;
+  text-align: center;
   color: #010101;
   font-size: 48px;
   font-weight: 700;
-  line-height: 38px; }
+  line-height: 1; }
+  @media (max-width: 640px) {
+    .callback__title {
+      font-size: 36px; } }
