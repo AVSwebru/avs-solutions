@@ -90,8 +90,21 @@
   cursor: pointer;
 }
 
-.catalog-filter__price-input {
-  display: block;
+.catalog-filter__price {
+  display: flex;
+  align-items: flex-end;
   max-width: 220px;
   margin-bottom: 10px;
+}
+
+.catalog-filter__price-input {
+  width: 150px;
+}
+
+.catalog-filter__price-label {
+  margin-right: 10px;
+  color: #101c23;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
 }

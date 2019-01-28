@@ -1,13 +1,26 @@
 .request-form {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: flex-start;
   &_modal {
     flex-direction: column;
     align-items: flex-start;
     .request-form__row {
       margin-right: 0;
       margin-bottom: 36px;
+    }
+    .request-form__submit {
+      position: static;
+      top: 0;
+    }
+    @media (max-width: $breakpoint-small) {
+      align-items: center;
+      .request-form__input {
+        width: 100%;
+      }
+      .request-form__submit {
+        width: 250px;
+        min-width: auto;
+      }
     }
   }
   @media (max-width: $breakpoint-large) {
@@ -17,6 +30,7 @@
 }
 
 .request-form__row {
+  position: relative;
   margin-right: 50px;
   @media (max-width: $breakpoint-large) {
     margin-right: 0;
@@ -48,9 +62,11 @@
 
 .request-form__submit {
   @include reset-btn;
+  position: relative;
+  top: 23px;
   min-width: 260px;
   box-sizing: border-box;
-  padding: 17px;
+  padding: 16px;
   color: #fff;
   font-size: 15px;
   font-weight: 700;
@@ -63,8 +79,31 @@
   }
   @media (max-width: $breakpoint-large) {
     min-width: 320px;
+    top: 0;
   }
   @media (max-width: $breakpoint-medium) {
     min-width: 290px;
   }
+}
+
+.request-form__info {
+  margin-top: 25px;
+  color: #060606;
+  a {
+    text-decoration: underline;
+    color: #060606;
+  }
+  @media (max-width: $breakpoint-large) {
+    max-width: 320px;
+    margin: 25px auto 0;
+  }
+  @media (max-width: $breakpoint-medium) {
+    max-width: 290px;
+  }
+}
+
+.request-form__errors {
+  max-width: 290px;
+  color: #6f2eab;
+  font-size: 12px;
 }

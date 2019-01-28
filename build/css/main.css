@@ -10946,7 +10946,7 @@ iframe.uk-cover {
   background-size: cover; }
   @media (max-width: 960px) {
     .request {
-      padding: 60px 0 90px; } }
+      padding: 60px 0 80px; } }
 
 .request__section-title {
   margin-bottom: 90px; }
@@ -10959,20 +10959,31 @@ iframe.uk-cover {
 
 .request-form {
   display: flex;
-  align-items: flex-end;
-  justify-content: center; }
+  align-items: flex-start; }
   .request-form_modal {
     flex-direction: column;
     align-items: flex-start; }
     .request-form_modal .request-form__row {
       margin-right: 0;
       margin-bottom: 36px; }
+    .request-form_modal .request-form__submit {
+      position: static;
+      top: 0; }
+    @media (max-width: 640px) {
+      .request-form_modal {
+        align-items: center; }
+        .request-form_modal .request-form__input {
+          width: 100%; }
+        .request-form_modal .request-form__submit {
+          width: 250px;
+          min-width: auto; } }
   @media (max-width: 1200px) {
     .request-form {
       flex-direction: column;
       align-items: center; } }
 
 .request-form__row {
+  position: relative;
   margin-right: 50px; }
   @media (max-width: 1200px) {
     .request-form__row {
@@ -11003,9 +11014,11 @@ iframe.uk-cover {
   padding: 0;
   border: none;
   background-color: transparent;
+  position: relative;
+  top: 23px;
   min-width: 260px;
   box-sizing: border-box;
-  padding: 17px;
+  padding: 16px;
   color: #fff;
   font-size: 15px;
   font-weight: 700;
@@ -11017,10 +11030,30 @@ iframe.uk-cover {
     outline: 3px solid #672aa0; }
   @media (max-width: 1200px) {
     .request-form__submit {
-      min-width: 320px; } }
+      min-width: 320px;
+      top: 0; } }
   @media (max-width: 960px) {
     .request-form__submit {
       min-width: 290px; } }
+
+.request-form__info {
+  margin-top: 25px;
+  color: #060606; }
+  .request-form__info a {
+    text-decoration: underline;
+    color: #060606; }
+  @media (max-width: 1200px) {
+    .request-form__info {
+      max-width: 320px;
+      margin: 25px auto 0; } }
+  @media (max-width: 960px) {
+    .request-form__info {
+      max-width: 290px; } }
+
+.request-form__errors {
+  max-width: 290px;
+  color: #6f2eab;
+  font-size: 12px; }
 
 .examples {
   padding: 90px 0 155px;
@@ -11272,10 +11305,21 @@ iframe.uk-cover {
   background-color: #672aa0;
   cursor: pointer; }
 
-.catalog-filter__price-input {
-  display: block;
+.catalog-filter__price {
+  display: flex;
+  align-items: flex-end;
   max-width: 220px;
   margin-bottom: 10px; }
+
+.catalog-filter__price-input {
+  width: 150px; }
+
+.catalog-filter__price-label {
+  margin-right: 10px;
+  color: #101c23;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1; }
 
 .menu-btn {
   padding: 0;
@@ -11384,6 +11428,9 @@ iframe.uk-cover {
   padding: 100px 100px 124px;
   background: #eef1fb url("../img/bg-request.jpg") 50% 50% no-repeat;
   background-size: cover; }
+  @media (max-width: 960px) {
+    .callback {
+      padding: 60px 20px 80px; } }
 
 .callback__title {
   margin-bottom: 40px;
