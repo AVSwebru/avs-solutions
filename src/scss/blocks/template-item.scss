@@ -3,6 +3,11 @@
   box-sizing: border-box;
   padding: 30px 22px 46px;
   background-color: #fff;
+  transition: box-shadow 0.25s;
+  &:hover {
+    box-shadow: 4px 6px 16px rgba(160, 156, 166, 0.35);
+    transition: box-shadow 0.25s;
+  }
 }
 
 .template-item__image-wrapper {
