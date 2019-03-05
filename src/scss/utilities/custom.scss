@@ -3,11 +3,13 @@
 
 $global-font-family: $font-base;
 $base-color: #2d2d2d;
-
+$global-link-color: #6f2eab;
+$base-link-hover-color: #6f2eab;
 $container-max-width: 1140px;
 $global-medium-gutter: 15px;
 
 $modal-dialog-width: 615px;
+$close-hover-color: #999;
 
 // 2. Import default variables and available mixins.
 @import "uikit/src/scss/variables-theme.scss";
@@ -17,6 +19,10 @@ $modal-dialog-width: 615px;
 
 @mixin hook-form-focus() {
   border-color: #672aa0;
+}
+
+@mixin hook-thumbnav-item-hover() {
+  outline: #6d2cc1 auto 5px;
 }
 
 // 4. Import UIkit.
