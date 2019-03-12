@@ -21,7 +21,7 @@ $close-hover-color: #999;
   border-color: #672aa0;
 }
 
-@mixin hook-thumbnav-item-hover() {
+.uk-thumbnav > * > :focus {
   outline: #6d2cc1 auto 5px;
 }
 

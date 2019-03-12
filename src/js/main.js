@@ -1,3 +1,3 @@
 import './uikit';
-import './animations';
 import './menu';
+import './slider';
