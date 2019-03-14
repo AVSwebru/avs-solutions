@@ -10,10 +10,16 @@
       element.addEventListener('mousedown', () => {
         mouseIsDown = true;
       });
+      element.addEventListener('touchstart', () => {
+        mouseIsDown = true;
+      });
     });
 
     comparsionItemArr.forEach(element => {
       element.addEventListener('mouseup', () => {
+        if (mouseIsDown == true) mouseIsDown = false;
+      });
+      element.addEventListener('touchend', () => {
         if (mouseIsDown == true) mouseIsDown = false;
       });
     });
@@ -22,10 +28,22 @@
       element.addEventListener('mouseleave', () => {
         mouseIsDown = false;
       });
+      element.addEventListener('touchcancel', () => {
+        mouseIsDown = false;
+      });
     });
     
     comparsionItemArr.forEach((element, i) => {
-      element.addEventListener('mousemove', () => {
+      element.addEventListener('mousemove', (event) => {
+        if (mouseIsDown) {
+          let comparsionVal = event.clientX - comparsionItemOffset;
+          if (comparsionVal < comparsionItemArr[i].offsetWidth && comparsionVal > 0) {
+            handlerArr[i].style.left = comparsionVal + 'px';
+            leftComparsionArr[i].style.width = comparsionVal  + 'px';
+          }
+        }
+      });
+      element.addEventListener('touchmove', (event) => {
         if (mouseIsDown) {
           let comparsionVal = event.clientX - comparsionItemOffset;
           if (comparsionVal < comparsionItemArr[i].offsetWidth && comparsionVal > 0) {
