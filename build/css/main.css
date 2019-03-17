@@ -11667,6 +11667,10 @@ iframe.uk-cover {
     color: #fff;
     font-size: 14px;
     font-weight: 500; }
+    @media (max-width: 640px) {
+      .comparsion__left::before {
+        min-width: 60px;
+        padding: 5px; } }
 
 .comparsion__right {
   position: absolute;
@@ -11689,6 +11693,10 @@ iframe.uk-cover {
     color: #fff;
     font-size: 14px;
     font-weight: 500; }
+    @media (max-width: 640px) {
+      .comparsion__right::before {
+        min-width: 60px;
+        padding: 5px; } }
 
 .comparsion__handler {
   position: absolute;

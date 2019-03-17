@@ -11,7 +11,9 @@
         mouseIsDown = true;
       });
       element.addEventListener('touchstart', () => {
+        event.preventDefault(); 
         mouseIsDown = true;
+        
       });
     });
 
@@ -20,6 +22,7 @@
         if (mouseIsDown == true) mouseIsDown = false;
       });
       element.addEventListener('touchend', () => {
+        event.preventDefault(); 
         if (mouseIsDown == true) mouseIsDown = false;
       });
     });
@@ -29,12 +32,14 @@
         mouseIsDown = false;
       });
       element.addEventListener('touchcancel', () => {
+        event.preventDefault(); 
         mouseIsDown = false;
       });
     });
     
     comparsionItemArr.forEach((element, i) => {
       element.addEventListener('mousemove', (event) => {
+        event.preventDefault(); 
         if (mouseIsDown) {
           let comparsionVal = event.clientX - comparsionItemOffset;
           if (comparsionVal < comparsionItemArr[i].offsetWidth && comparsionVal > 0) {
@@ -44,8 +49,11 @@
         }
       });
       element.addEventListener('touchmove', (event) => {
+        event.preventDefault(); 
+ 
         if (mouseIsDown) {
-          let comparsionVal = event.clientX - comparsionItemOffset;
+        
+          let comparsionVal = event.touches[0].clientX - comparsionItemOffset;
           if (comparsionVal < comparsionItemArr[i].offsetWidth && comparsionVal > 0) {
             handlerArr[i].style.left = comparsionVal + 'px';
             leftComparsionArr[i].style.width = comparsionVal  + 'px';

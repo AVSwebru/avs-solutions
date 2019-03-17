@@ -27,6 +27,10 @@
     color: #fff;
     font-size: 14px;
     font-weight: 500;
+    @media (max-width: $breakpoint-small) {
+      min-width: 60px;
+      padding: 5px;
+    }
   }
 }
 
@@ -51,6 +55,10 @@
     color: #fff;
     font-size: 14px;
     font-weight: 500;
+    @media (max-width: $breakpoint-small) {
+      min-width: 60px;
+      padding: 5px;
+    }
   }
 }
 
